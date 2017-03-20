@@ -99,14 +99,18 @@ void rf_TransmitDataFunc()
   // Read CO2 concentration
   float adcVolts = RC02_Read(RC02_analog_pin, RC02_read_sample_times);
   RC02_ppmCO2 = RC02_GetPercentage(adcVolts);
-
+  
+  // No soil moisture and temperature sensor
+  soil_dielctric = 0;
+  soil_temp = 0;
+  
   // Convert all data into char-array
-  dtostrf((int)(t*10),3,0,dtostrfbuffer1);
-  dtostrf((int)h,2,0,dtostrfbuffer2);
-  dtostrf(li,5,0,dtostrfbuffer3);
-  dtostrf(RC02_ppmCO2,4,0,dtostrfbuffer4);
-  dtostrf(soil_dielctric * 100,4,0,dtostrfbuffer5);
-  dtostrf(soil_temp * 10,3,0,dtostrfbuffer6);
+  dtostrf((int)(t*10), 3, 0, dtostrfbuffer1);
+  dtostrf((int)h, 2 , 0, dtostrfbuffer2);
+  dtostrf(li, 5, 0, dtostrfbuffer3);
+  dtostrf(RC02_ppmCO2, 4, 0, dtostrfbuffer4);
+  dtostrf(soil_dielctric * 100, 4, 0, dtostrfbuffer5);
+  dtostrf(soil_temp * 10, 3, 0, dtostrfbuffer6);
 
   // Connect all char-array into one
   sprintf(rf_dataTransmitted,"S%sT%sH%sL%sC%sD%sP%sE", node_id, dtostrfbuffer1, dtostrfbuffer2, dtostrfbuffer3, dtostrfbuffer4, dtostrfbuffer5, dtostrfbuffer6);  
