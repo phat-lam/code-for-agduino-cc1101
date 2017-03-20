@@ -30,7 +30,7 @@
 
 SimpleTimer timer;
 /*-----( Declare Constants and Pin Numbers )------*/
-// WSN ID. "002" shows this node in Network 0 and has ID 01.
+// WSN ID. "002" shows this node in Network 0 and has ID 02.
 char node_id[] = "002";
 #define sht_dataPin 6
 #define sht_clockPin 2
