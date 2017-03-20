@@ -25,7 +25,7 @@
 
 SimpleTimer timer;
 /*-----( Declare Constants and Pin Numbers )------*/
-// WSN id
+// WSN ID. "001" shows the node is in Network 0 and has ID 01.
 char node_id[] = "001";
 // DHT sensor data pin
 #define DHTPIN  2
