@@ -5,7 +5,7 @@
  * 
  * Atmega328p-au MCU with arduino bootloader.
  * Data transceiver: rfic CC1101 - UART serial interface, frequency: 433MHz, default baud-rate: 9600 kbps.
- * Sensors: temperature & relative humidity SHT11, light intensity BH1750, CO2 concentration sensor RC-02.
+ * Sensors: temperature & relative humidity SHT11, light intensity BH1750.
  * 
  * The circuit:
  * D2: SHT11 clock pin.
